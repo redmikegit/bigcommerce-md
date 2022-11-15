@@ -1,9 +1,9 @@
 {
-  "name": "bigcommerce-cornerstone",
-  "description": "The BigCommerce reference theme for the Stencil platform",
+  "name": "gillette-customized",
+  "description": "Sample Customized Theme For Gillete",
   "version": "6.7.0",
   "private": true,
-  "author": "BigCommerce",
+  "author": "MikeAsuncion",
   "license": "MIT",
   "dependencies": {
     "@bigcommerce/stencil-utils": "6.12.1",
