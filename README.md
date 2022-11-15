@@ -10,3 +10,4 @@ This sample Bigcommerce template is based on the original defaul theme called Co
 - Foundation
 - GruntJS
 
+### Concept design for Gillette using BigCommerce Platform
