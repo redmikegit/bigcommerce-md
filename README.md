@@ -1,6 +1,6 @@
 # bigcommerce-md
 
-This sample Bigcommerce template is based on the original defaul theme called CornerStone.
+This sample Bigcommerce template is based on the original default theme called CornerStone.
 
 ## STACK:
 - BigCommerce
