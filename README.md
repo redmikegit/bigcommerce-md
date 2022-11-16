@@ -1,6 +1,11 @@
 ## Concept design (homepage only) for Gillette using Bootstrap and BigCommerce Platform
 
-### STACK:
+### Features:
+- Customizable Banners and products
+- Fully responzive
+- Full Bootstrap Framework
+
+### Stack:
 - BigCommerce
 - Stencil
 - SCSS
