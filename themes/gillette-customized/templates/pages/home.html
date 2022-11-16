@@ -25,21 +25,74 @@ blog:
         {{> components/common/alert/alert-info message}}
     {{/each}}
 
-<div class="main full">
-    {{#if products.featured}}
-        {{> components/products/featured products=products.featured columns=theme_settings.homepage_featured_products_column_count}}
-    {{/if}}
-    {{{region name="home_below_featured_products"}}}
+<div class=" "> 
+    <!-- discover section start -->
+<div class="layout_padding collection_section">
+    <div class="container">
+        <h1 class=""><strong>Discover</strong></h1>
+        <p class="consectetur_text">Master your facial hair style.
+            Re-energise your skin.</p>
+        <div class="collection_section_2">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="about-img">
+                        <button class="new_bt">Skin & Beard Care</button>
+                        {{{region name="home_below_new_products"}}} 
 
-    {{#if products.top_sellers}}
-        {{> components/products/top products=products.top_sellers columns=theme_settings.homepage_top_products_column_count}}
-    {{/if}}
-    {{{region name="home_below_top_products"}}}
+                      
+                    </div>
+                    <button class="seemore_bt">See More</button>
+                </div>
+                <div class="col-md-6">
+                    <div class="about-img2">
+                        {{{region name="home_below_top_products"}}} 
+                          
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="collection_section">
+    <div class="container">
+        <hr>
+        <h1 class=""><strong>Razors for women</strong></h1>
+        <p class="consectetur_text">Explore the Venus Direct range.</p>
+    </div>
+</div>
+<div class="collectipn_section_3 ">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 text-center">
+                <img src="{{cdn 'assets/img/venus-razors-desktop.webp'}}">
+             </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                {{{region name="home_below_featured_products"}}} 
+            </div>
+        </div>
+    </div>
+</div>
+<div class="collection_section">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <img class="" src="{{cdn 'assets/img/recycle-2x.webp'}}">
+            </div>
 
-    {{#if products.new}}
-        {{> components/products/new products=products.new columns=theme_settings.homepage_new_products_column_count}}
-    {{/if}}
-    {{{region name="home_below_new_products"}}}
+            <div class="col-12 text-center">
+                <h2>Recycle your whole razor blades</h2>
+                <p>Say no to the waste by sending us your used razors by clicking <button
+                        class="btn btn-sm btn-success">here</button>.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //discover section end -->
+ 
 </div>
 {{/partial}}
 {{> layout/base}}

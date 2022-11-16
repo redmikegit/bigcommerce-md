@@ -1,13 +1,13 @@
 {
   "name": "gillette-customized",
-  "version": "6.7.0",
+  "version": "1",
   "template_engine": "handlebars_v4",
   "meta": {
     "price": 0,
     "documentation_url": "https://support.bigcommerce.com/articles/Public/Cornerstone-Theme-Manual",
-    "author_name": "BigCommerce",
-    "author_email": "support@bigcommerce.com",
-    "author_support_url": "https://support.bigcommerce.com/",
+    "author_name": "MikeAsuncion",
+    "author_email": "hello@mikeasuncion.ph",
+    "author_support_url": "http://mikeasuncion.ph/",
     "composed_image": "composed.png",
     "features": [
       "fully_responsive",
