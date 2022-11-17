@@ -116,6 +116,39 @@
     ],
     "pages/home": [
       {
+        "name": "discover_title"
+      },
+      {
+        "name": "discover_sub_title"
+      },
+      {
+        "name": "highlight_product_1_title"
+      },
+      {
+        "name": "highlight_product_1"
+      },
+      {
+        "name": "highlight_product_2"
+      },
+      {
+        "name": "custom_selection_title"
+      },
+      {
+        "name": "custom_selection_sub_title"
+      },
+      {
+        "name": "custom_selection_bottom_title"
+      },
+      {
+        "name": "custom_selection_bottom_content"
+      },
+      {
+        "name": "custom_selection_bg_image"
+      },
+      {
+        "name": "custom_selection_products"
+      },
+      {
         "name": "header_navigation_bottom--global"
       },
       {

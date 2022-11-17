@@ -554,6 +554,11 @@
      padding: 20px 0px;
      background-size: 100%;
      background-repeat: no-repeat;
+
+     .banner_section{
+        max-width: 1360px;
+        margin: 0 auto;
+     }
  }
 
  .padding_0 {
@@ -850,6 +855,11 @@
      color: #ffffff;
      height: 50px;
      margin-left: -60px;
+     height: auto;
+
+     p{
+        color: white !important;
+     }
  }
 
 

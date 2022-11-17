@@ -29,15 +29,19 @@ blog:
     <!-- discover section start -->
 <div class="layout_padding collection_section">
     <div class="container">
-        <h1 class=""><strong>Discover</strong></h1>
-        <p class="consectetur_text">Master your facial hair style.
-            Re-energise your skin.</p>
+        <h1 class=""><strong>{{{region name="discover_title"}}} </strong></h1>
+        <p class="consectetur_text">
+            {{{region name="discover_sub_title"}}} 
+            <!-- Master your facial hair style. Re-energise your skin. -->
+        </p>
         <div class="collection_section_2">
             <div class="row">
                 <div class="col-md-6">
                     <div class="about-img">
-                        <button class="new_bt">Skin & Beard Care</button>
-                        {{{region name="home_below_new_products"}}} 
+                        <button class="new_bt">
+                            {{{region name="highlight_product_1_title"}}} 
+                        </button>
+                        {{{region name="highlight_product_1"}}} 
 
                       
                     </div>
@@ -45,7 +49,7 @@ blog:
                 </div>
                 <div class="col-md-6">
                     <div class="about-img2">
-                        {{{region name="home_below_top_products"}}} 
+                        {{{region name="highlight_product_2"}}} 
                           
                     </div>
                 </div>
@@ -56,22 +60,26 @@ blog:
 <div class="collection_section">
     <div class="container">
         <hr>
-        <h1 class=""><strong>Razors for women</strong></h1>
-        <p class="consectetur_text">Explore the Venus Direct range.</p>
+        <h1 class=""><strong>
+            {{{region name="custom_selection_title"}}}
+        </strong></h1>
+        <div class="consectetur_text">
+            {{{region name="custom_selection_sub_title"}}}
+        </div>
     </div>
 </div>
 <div class="collectipn_section_3 ">
     <div class="container-fluid">
         <div class="row">
             <div class="col-12 text-center">
-                <img src="{{cdn 'assets/img/venus-razors-desktop.webp'}}">
+                {{{region name="custom_selection_bg_image"}}}
              </div>
         </div>
     </div>
     <div class="container">
         <div class="row">
             <div class="col-12">
-                {{{region name="home_below_featured_products"}}} 
+                {{{region name="custom_selection_products"}}} 
             </div>
         </div>
     </div>
@@ -84,9 +92,12 @@ blog:
             </div>
 
             <div class="col-12 text-center">
-                <h2>Recycle your whole razor blades</h2>
-                <p>Say no to the waste by sending us your used razors by clicking <button
-                        class="btn btn-sm btn-success">here</button>.</p>
+                <h2>
+                    {{{region name="custom_selection_bottom_title"}}} 
+                </h2>
+                <p>
+                    {{{region name="custom_selection_bottom_content"}}} 
+                </p>
             </div>
         </div>
     </div>
