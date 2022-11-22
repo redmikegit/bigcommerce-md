@@ -1,7 +1,7 @@
 /***** GLOBAL STYLE *****/
 
 //----- GOOGLE FONT
-@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;600;700&family=Kaushan+Script&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;600;700&family=Kaushan+Script&display=swap');
 
 //---- ANIMATIONS
 @keyframes slideInLeft {
@@ -442,8 +442,7 @@ p {
         list-style: none;
         margin-left: 0px;
         padding-left: 0px;
-
-        li {}
+ 
     }
 
     .gl-mobile-drawer-content {
@@ -789,7 +788,7 @@ p {
         top: -3px;
         left: -6px;
         width: 20px;
-        height: 2px;
+        height: 5px;
         content: '•';
         text-align: center;
         background: white;
@@ -803,6 +802,7 @@ p {
         flex-wrap: wrap;
         align-content: center;
         justify-content: space-evenly;
+        border-radius: 50%;
     }
 
     .slick-dots li.slick-active button:before {
@@ -839,9 +839,7 @@ p {
                 }
             }
         }
-
-        .gl-d-nav {}
-
+ 
         .gl-d-body {
             width: 100%;
             box-shadow: -16px -6px 7px 1px #e5e5e5;
