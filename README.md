@@ -1,4 +1,4 @@
-## Concept design (homepage only) for Gillette using Bootstrap and BigCommerce Platform
+## Replicated design (homepage only) for Gillette using Bootstrap and BigCommerce Platform
 
 ### Features:
 - Customizable Banners and products
