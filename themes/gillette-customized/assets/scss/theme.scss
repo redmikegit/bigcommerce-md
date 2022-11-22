@@ -1,16 +1,5 @@
-// =============================================================================
-// STENCIL
-// =============================================================================
-
-
-// Tools
-// -----------------------------------------------------------------------------
-//
-// 1. Import Citadel's toolkit for use.
-//
-// -----------------------------------------------------------------------------
-
+ 
 @import "../../node_modules/@bigcommerce/citadel/dist/tools/toolkit"; // 1
 @import "tools/tools";
 @import "settings/normalize/normalize"; // 4
-@import "gillette-styles"; // Custom Stylings For Gillette.
+@import "gillette-orig-styles"; // Original Stylings For Gillette.

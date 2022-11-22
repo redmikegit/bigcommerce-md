@@ -1,104 +1,192 @@
-<!-- header section start -->
-<div class="header_section">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-sm-2">
-                <div class="logo">
+<div class="gl-header-container">
+    <div class="container">
+        <div class="row gl-header-wrap ">
+            <div class="col-md-4 gl-logo-wrap">
+                {{#if page_type '===' 'default'}}
+                <h1 class="header-logo header-logo--{{theme_settings.logo-position}}">
+                    {{> components/common/store-logo}}
 
-                    {{#if page_type '===' 'default'}}
-                    <h1 class="header-logo header-logo--{{theme_settings.logo-position}}">
-                        {{> components/common/store-logo}}
-                    </h1>
-                    {{else}}
-                    <div class="header-logo header-logo--{{theme_settings.logo-position}}">
-                        {{> components/common/store-logo}}
-                    </div>
-                    {{/if}}
-
+                </h1>
+                {{else}}
+                <div class="header-logo header-logo--{{theme_settings.logo-position}}">
+                    {{> components/common/store-logo}}
                 </div>
+                {{/if}}
             </div>
-            <div class="col-sm-9">
-                <nav class="navbar navbar-expand-lg bg-transparent">
-                    <button class="navbar-toggler" type="button" data-toggle="collapse"
-                        data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
-                        aria-label="Toggle navigation">
-                        <span class=""></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                        <div class="navbar-nav">
-                            {{> components/common/navigation-menu}}
+            <div class="col-md-4 gl-nav-wrap">
+                <ul
+                    class="navPages-list{{#if theme_settings.navigation_design '!==' 'simple'}} navPages-list-depth-max{{/if}}">
+                    {{#each categories}}
+                    <li class="navPages-item">
+                        {{#if ../theme_settings.navigation_design '===' 'simple'}}
+                        {{> components/common/navigation-list}}
+                        {{/if}}
+                        {{#if ../theme_settings.navigation_design '===' 'alternate'}}
+                        {{> components/common/navigation-list-alternate}}
+                        {{/if}}
+                    </li>
+                    {{/each}}
+                    {{#unless theme_settings.hide_content_navigation}}
+                    {{#each pages}}
+                    <li class="navPages-item navPages-item-page">
+                        <a class="navPages-action{{#if name '==' ../page.title}} activePage{{/if}}" href="{{url}}"
+                            aria-label="{{name}}">
+                            {{name}}
+                        </a>
+                    </li>
+                    {{/each}}
+                    {{/unless}}
+                </ul>
+            </div>
+            <div class="col-md-4 gl-accounts-wrap">
+                <div class=" gl-toggle-mobile-menu">
+                    <div class="gl-three-lines ">
+                        <div class="gl-hamburger" id="gl-hamburger-1">
+                          <span class="line one"></span>
+                          <span class="line two"></span>
+                          <span class="line three"></span>
                         </div>
                     </div>
-                </nav>
+                     
+                </div>
+                <ul class="navPages-list navPages-list--user">
+
+
+                    <li class="navPages-item gl-search-header">
+                        <a class="open-search-btn">
+                            <span class="icon-search"></span>
+                        </a>
+                    </li>
+
+                    <li class="navPages-item gl-accounts-header">
+                        <a class="navPages-action" href="{{urls.auth.login}}" aria-label="{{lang 'common.login'}}">
+                            <span class="icon-user-circle-o"></span>
+                        </a>
+
+                    </li>
+                    <li class="navPages-item gl-language">
+                        <img class="" src="{{cdn 'assets/img/au-flag.png'}}">
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
-    <div class="banner_section">
+    
+    <!-- Search Form-->
+    <div class="gl-search-form">
+
         <div class="container-fluid">
-            <section class="slide-wrapper">
-                <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <input type="text" placeholder="Search">
+                    <button class="btn bg-transparent close-search-btn">
+
+                        <span class="icon-arrow_right_alt"></span>
+                        <span>
+                            CLOSE
+                        </span> 
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Search Form-->
+</div>
 
 
-                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                        <ol class="carousel-indicators">
-                            {{#each carousel.slides}} 
-                            {{#if button_text}}
-                            <li data-target="#myCarousel" data-slide-to="{{@index}}" class="{{#if @index '==' 0}}active{{else}} notActice{{/if}}"></li>
-                            {{/if}}
-                            {{/each}}
-                        </ol>
+<!-- MOBILE DRAWER-->
+<div class="gl-mobile-drawer gl-close">
+    <button class="btn btn-sm close gl-close-drawer">
+        <span class="icon-cancel-circle"></span>
+    </button>
+    <div class="gl-mobile-drawer-content">
+        {{#each categories}}
+        <div class="navPages-item">
+         
+            {{> components/common/navigation-list-alternate}}
+        
+        </div>
+        {{/each}}
+        {{#unless theme_settings.hide_content_navigation}}
+        {{#each pages}}
+        <div class="navPages-item navPages-item-page">
+            <a class="navPages-action{{#if name '==' ../page.title}} activePage{{/if}}" href="{{url}}"
+                aria-label="{{name}}">
+                {{name}}
+            </a>
+        </div>
+        {{/each}}
+        {{/unless}}
+     </div>
+</div>
+<!-- /MOBILE DRAWER-->
 
-                        <div class="carousel-inner">
-
-                            {{#each carousel.slides}}
-                            <div class="carousel-item {{#if @index '==' 0}}active{{else}} notActice{{/if}}">
-                                <div class="row">
-                                    <div class="col-sm-2 padding_0">
-                                        <div class="page_no"> {{add @index 1}} / 3</div>
-                                    </div>
-                                    <div class="col-sm-5">
-                                         
-                                        <div class="banner_taital">
-                                            <h1 class="banner_text">{{{heading}}} </h1>
-                                            <h1 class="mens_text"><strong>{{{text}}}</strong>
-                                            </h1>
-                                            <p class="lorem_text">ipsum dolor sit amet, consectetur adipiscing elit, sed
-                                                do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                                {{#if button_text}}
-                                            <button href="{{url}}" class="buy_bt">{{button_text}}</button>
-                                            <button  href="{{url}}"class="more_bt">See More</button>
-                                            {{/if}}
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-5">
-                                        <div class="">
-                                            {{#if @first}}
-                                            {{> components/common/responsive-img
-                                                image=stencil_image
-                                                class="heroCarousel-image"
-                                                fallback_size='1280w'
-                                                lazyload='disabled'
-                                            }}
-                                        {{else}}
-                                            {{> components/common/responsive-img
-                                                image=stencil_image
-                                                class="heroCarousel-image"
-                                                fallback_size='1280w'
-                                                lazyload='lazyload'
-                                            }}
-                                        {{/if}}
-                                         </div>
-                                    </div>
-                                </div>
+<div class="gl-banner-container">
+    <div class="">
+        <div class=" gl-slider-wrap">
+            <div class="gl-slider">
+                <div class="row gl-bg gl-1">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h3 class="header">Master Your Style</h3>
+                                <h5 class="text">Discover the King C Gillette Range</h5>
+                                <p class="text">Everything you need to help you master your style.</p>
+                                <button class="btn btn-secondary">LEARN MORE</button>
                             </div>
-                            {{/each}}
-                            
+                            <div class="col-md-6 text-center">
+                                <img class="thumb" src="{{cdn 'assets/img/banner/gillette-kcg-full-range-modular-standup-v1-2.png '}}">
+                            </div>
                         </div>
                     </div>
                 </div>
-            </section>
+                <div class="row gl-bg gl-2">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h3 class="header">THE WORLD'S FIRST HEATED RAZOR</h3>
+                                <h5 class="text">Experience the warmth and comfort of the greatest shave on the planet.</h5>
+                                 <button class="btn btn-secondary">LEARN MORE</button>
+                            </div>
+                            <div class="col-md-6 text-center">
+                                <img class="thumb oversized" src="{{cdn 'assets/img/banner/home-banner-heated.png '}}">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row gl-bg gl-3">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h3 class="header">EFFORTLESS EXPOLIATION</h3>
+                                <h5 class="text special">FOR OUR BEST<span>erest</span> SHAVE</h5>
+                                 <button class="btn btn-secondary">DISCOVER GILLETTE LABS</button>
+                            </div>
+                            <div class="col-md-6 text-center">
+                                <img class="thumb oversized" src="{{cdn 'assets/img/banner/gillette-desktop-hompage-banner.png '}}">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row gl-bg gl-4">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h3 class="header">GILLETTE MVP </h3>
+                                <h5 class="special">LIMITED EDITION</h5>
+                                 <button class="btn btn-secondary">DISCOVER GILLETTE LABS</button>
+                            </div>
+                            <div class="col-md-6 text-center">
+                                <img class="thumb oversized" src="{{cdn 'assets/img/banner/final-mvp.png '}}">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                 
+            </div>
         </div>
     </div>
-
 </div>
-<!-- header section end -->
+ 
+

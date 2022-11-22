@@ -24,86 +24,154 @@ blog:
     {{#each shipping_messages}}
         {{> components/common/alert/alert-info message}}
     {{/each}}
-
-<div class=" "> 
-    <!-- discover section start -->
-<div class="layout_padding collection_section">
-    <div class="container">
-        <h1 class=""><strong>{{{region name="discover_title"}}} </strong></h1>
-        <p class="consectetur_text">
-            {{{region name="discover_sub_title"}}} 
-            <!-- Master your facial hair style. Re-energise your skin. -->
-        </p>
-        <div class="collection_section_2">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="about-img">
-                        <button class="new_bt">
-                            {{{region name="highlight_product_1_title"}}} 
-                        </button>
-                        {{{region name="highlight_product_1"}}} 
-
-                      
-                    </div>
-                    <button class="seemore_bt">See More</button>
-                </div>
-                <div class="col-md-6">
-                    <div class="about-img2">
-                        {{{region name="highlight_product_2"}}} 
-                          
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="collection_section">
-    <div class="container">
-        <hr>
-        <h1 class=""><strong>
-            {{{region name="custom_selection_title"}}}
-        </strong></h1>
-        <div class="consectetur_text">
-            {{{region name="custom_selection_sub_title"}}}
-        </div>
-    </div>
-</div>
-<div class="collectipn_section_3 ">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-12 text-center">
-                {{{region name="custom_selection_bg_image"}}}
-             </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                {{{region name="custom_selection_products"}}} 
-            </div>
-        </div>
-    </div>
-</div>
-<div class="collection_section">
-    <div class="container">
-        <div class="row">
-            <div class="col-12 text-center">
-                <img class="" src="{{cdn 'assets/img/recycle-2x.webp'}}">
-            </div>
-
-            <div class="col-12 text-center">
-                <h2>
-                    {{{region name="custom_selection_bottom_title"}}} 
-                </h2>
-                <p>
-                    {{{region name="custom_selection_bottom_content"}}} 
-                </p>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- //discover section end -->
  
+
+<div class="gl-discover-container">
+    <div class="gl-discover-wrap">
+        <div class="row gl-d-nav">
+            <div class="col-12">
+
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="men-tab" data-toggle="tab" data-target="#men" type="button" role="tab" aria-controls="men" aria-selected="true">DISCOVER MEN</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="women-tab" data-toggle="tab" data-target="#women" type="button" role="tab" aria-controls="women" aria-selected="false">DISCOVER WOMEN</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="gl-d-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="men" role="tabpanel" aria-labelledby="men-tab">
+                                <div class="container">
+                                    <div class="row mb-3">
+                                        <div class="col-md-4 gl-d-item">
+                                            <div class="gl-image" role="img">
+                                                <span class="inner" style="background:url('{{cdn "assets/img/highlights/homeTabs_4.jpg"}}')"></span>
+                                            </div>
+                                            <div class="caption" >
+                                                <a href="#">Razors</a> >
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="col-md-4 gl-d-item">
+                                            <div class="gl-image" role="img">
+                                                <span class="inner" style="background:url('{{cdn "assets/img/highlights/homeTabs_5.jpg"}}')"></span>
+                                            </div>
+                                            <div class="caption" >
+                                                <a href="#">Blades</a> >
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="col-md-4 gl-d-item">
+                                            <div class="gl-image" role="img">
+                                                <span class="inner" style="background:url('{{cdn "assets/img/highlights/mens-electrical-reversed.jpg"}}')"></span>
+                                            </div>
+                                            <div class="caption" >
+                                                <a href="#">Electrical</a> >
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <div class="col-md-4 gl-d-item">
+                                            <div class="gl-image" role="img">
+                                                <span class="inner" style="background:url('{{cdn "assets/img/highlights/homeTabs_7.jpg"}}')"></span>
+                                            </div>
+                                            <div class="caption white" >
+                                                <a href="#">Skin & Beard Care</a> >
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 gl-d-item">
+                                            <div class="gl-image" role="img">
+                                                <span class="inner" style="background:url('{{cdn "assets/img/highlights/homeTabs_8.jpg"}}')"></span>
+                                            </div>
+                                            <div class="caption" >
+                                                <a href="#">Heated Razor</a> >
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="col-md-4 gl-d-item">
+                                            <div class="gl-image" role="img">
+                                                <span class="inner" style="background:url('{{cdn "assets/img/highlights/homeTabs_labs.jpg"}}')"></span>
+                                            </div>
+                                            <div class="caption white" >
+                                                <a href="#">GilletteLabs</a> >
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="women" role="tabpanel" aria-labelledby="women-tab">
+                                <div class="container">
+                                    <div class="row mb-3">
+                                        <div class="col-md-4 gl-d-item">
+                                            <div class="gl-image" role="img">
+                                                <span class="inner" style="background:url('{{cdn "assets/img/highlights/womens-venus-razors.jpg"}}')"></span>
+                                            </div>
+                                            <div class="caption" >
+                                                <a href="#">Razors</a> >
+                                            </div>
+                                        </div>
+                                            <div class="col-md-4 gl-d-item">
+                                            <div class="gl-image" role="img">
+                                                <span class="inner" style="background:url('{{cdn "assets/img/highlights/womens-venus-accessories.jpg"}}')"></span>
+                                            </div>
+                                            <div class="caption" >
+                                                <a href="#">Accessories</a> >
+                                            </div>
+                                        </div>
+                                            <div class="col-md-4 gl-d-item">
+                                            <div class="gl-image" role="img">
+                                                <span class="inner" style="background:url('{{cdn "assets/img/highlights/women-braun-ketchum-183.jpg"}}')"></span>
+                                            </div>
+                                            <div class="caption" >
+                                                <a href="#">Eelctrical</a> >
+                                            </div>
+                                        </div>
+                                    
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+ 
+<div class="container gl-recycle-container">
+    <div class="row gl-r-wrap ">
+        <div class="col-md-2 gl-r-img">
+            <img class="" src="{{cdn 'assets/img/gd-terracycle-logo.webp'}}">
+        </div>
+        <div class="col-10 gl-r-desc">
+            <h2>Recycle your whole razor and blades</h2>
+            <h4>Say no to the waste by sending us your used razors by clicking this banner.</h4>
+        </div>
+    </div>
+</div>
+
+<div class="container gl-seo-container">
+    <div class="row">
+        <div class="col-12">
+            <h4>Our best blades - and a better way to buy</h4>
+        </div>
+        <div class="col-md-6">
+            <p>No sooner had King C Gillette invented the world’s first disposable blade, he set about trying to improve it. This
+                led to the first adjustable blade and the first multiblade razor.</p>
+        </div>
+        <div class="col-md-6">
+            <p>Benefit from over 100 years of class leading innovation and quality Remember, quality blades are sharper (and stay
+                sharper too!). They last longer and you use less which means each shave is saving you money.</p>
+        </div>
+    </div>
+</div>
+
 {{/partial}}
 {{> layout/base}}

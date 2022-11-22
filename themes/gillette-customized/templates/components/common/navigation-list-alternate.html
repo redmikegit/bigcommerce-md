@@ -1,20 +1,19 @@
+
 {{#if children}}
-    <a class="navPages-action navPages-action-depth-max has-subMenu is-root{{#if is_active}} activePage{{/if}}"
-       href="{{url}}"
+    <div class="gl-mobile-nav-item navPages-action navPages-action-depth-max has-subMenu is-root{{#if is_active}} activePage{{/if}}"
+        id="{{id}}"
        data-collapsible="navPages-{{id}}"
        aria-label="{{name}}"
     >
         {{name}}
-        <i class="icon navPages-action-moreIcon" aria-hidden="true">
-            <svg><use xlink:href="#icon-chevron-down" /></svg>
-        </i>
-    </a>
+        <span class="gl-toggler-icon-{{id}} icon-keyboard_arrow_down float-right"></span>
+    </div>
     {{> components/common/navigation-dropdown}}
 {{else}}
-    <a class="navPages-action{{#if is_active}} activePage{{/if}}"
-       href="{{url}}"
+    <div class="navPages-action{{#if is_active}} activePage{{/if}}"
+       
        aria-label="{{name}}"
     >
         {{name}}
-    </a>
+    </div>
 {{/if}}

@@ -1,3 +1,4 @@
+
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin,
     CleanPlugin = require('clean-webpack-plugin'),
     LodashPlugin = require('lodash-webpack-plugin'),
@@ -82,3 +83,5 @@ module.exports = {
         },
     },
 };
+
+

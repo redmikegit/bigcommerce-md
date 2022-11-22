@@ -8,8 +8,10 @@
   "dependencies": {
     "@bigcommerce/stencil-utils": "6.12.1",
     "core-js": "^3.9.0",
+    "cors": "^2.8.5",
     "creditcards": "^4.2.0",
     "easyzoom": "^2.5.3",
+    "express": "^4.18.2",
     "focus-trap": "^6.3.0",
     "focus-within-polyfill": "^5.1.0",
     "formdata-polyfill": "^3.0.20",
