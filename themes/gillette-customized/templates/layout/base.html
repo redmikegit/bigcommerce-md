@@ -91,19 +91,22 @@
                 speed: 500,
                 fade: true,
                 cssEase: 'linear',
-                adaptiveHeight: true
+                adaptiveHeight: true,
+                // autoplay: true,
+                // autoplaySpeed: 3000,
+                // arrows: false,
             });
 
             /* SEARCH */
-            $('.open-search-btn').on('click', function(){
+            $('.open-search-btn').on('click', function () {
                 $('.gl-search-form').fadeIn();
             });
-            $('.close-search-btn').on('click', function(){
+            $('.close-search-btn').on('click', function () {
                 $('.gl-search-form').fadeOut();
             });
 
             /* MOBILE NAV */
-            $(".gl-toggle-mobile-menu, .gl-close-drawer").click(function(){
+            $(".gl-toggle-mobile-menu, .gl-close-drawer").click(function () {
                 $('.gl-hamburger').toggleClass("is-active");
                 $('.gl-mobile-drawer').toggleClass("gl-open gl-close");
             });
@@ -111,13 +114,13 @@
 
             $('.navPage-subMenu-horizontal').hide();
 
-            $('.gl-mobile-nav-item').on('click', function(){
+            $('.gl-mobile-nav-item').on('click', function () {
                 var thisId = $(this).attr('id');
-                var navPage = $('.gl-m-d-'+thisId);
+                var navPage = $('.gl-m-d-' + thisId);
                 console.log(thisId);
                 navPage.slideToggle();
-                $('.gl-toggler-icon-sub-'+thisId).toggleClass("icon-add icon-minimize")
-                $('.gl-toggler-icon-'+thisId).toggleClass("icon-keyboard_arrow_down icon-keyboard_arrow_up")
+                $('.gl-toggler-icon-sub-' + thisId).toggleClass("icon-add icon-minimize")
+                $('.gl-toggler-icon-' + thisId).toggleClass("icon-keyboard_arrow_down icon-keyboard_arrow_up")
             });
 
         });

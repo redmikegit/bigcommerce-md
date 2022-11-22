@@ -479,12 +479,13 @@ p {
     padding-top: 115px;
     overflow: hidden;
 
+    .slick-arrow {
+        display: none !important;
+    }
+
     @media screen and(max-width: 767px) {
         padding-top: 95px;
 
-        .slick-arrow {
-            display: none !important;
-        }
     }
 
     .gl-slider-wrap {
@@ -717,18 +718,16 @@ p {
     }
 
     .slick-dots {
-        position: absolute;
-        bottom: -5px;
-
+        margin: 0 auto;
+        position: relative;
+        bottom: 35px;
         display: block;
-
-        width: 100%;
+        width: fit-content;
         padding: 0;
-        margin: 0;
-
         list-style: none;
-
         text-align: center;
+        background: #00000026;
+        border-radius: 30px;
     }
 
     .slick-dots li {
@@ -742,6 +741,13 @@ p {
         padding: 0;
 
         cursor: pointer;
+
+        &.slick-active,
+        &:hover {
+            button:before {
+                height: 12px !important;
+            }
+        }
     }
 
     .slick-dots li button {
@@ -774,27 +780,29 @@ p {
         border: 0 !important;
         outline: none !important;
     }
+ 
 
     .slick-dots li button:before {
         font-family: 'slick';
         font-size: 6px;
-        // line-height: 20px;
-
-        position: absolute;
-        top: 0;
-        left: 0;
-
+        position: relative;
+        top: -3px;
+        left: -6px;
         width: 20px;
         height: 2px;
-
         content: '•';
         text-align: center;
         background: white;
         opacity: .25;
-        // color: black;
-
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
+        transition: all .7s ease-in-out;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: space-evenly;
     }
 
     .slick-dots li.slick-active button:before {
